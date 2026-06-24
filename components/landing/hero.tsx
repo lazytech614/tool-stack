@@ -2,6 +2,7 @@ import { ArrowRight, GitFork } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "../shared/container";
 import { ToolShowcase } from "./tool-showcase";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -27,13 +28,15 @@ export function Hero() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white"
-              >
-                Explore Tools
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/tools">
+                <Button
+                  size="lg"
+                  className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white"
+                >
+                  Explore Tools
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
 
               <Button
                 size="lg"
