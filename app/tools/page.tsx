@@ -68,23 +68,23 @@ const ToolsPage = () => {
     <main className="min-h-screen bg-white dark:bg-black py-10">
       <Container>
         {/* Top row: heading + status */}
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-4 md:flex-row items-start md:justify-between">
           <PageHeading
             title="Developer Tools"
             description="Essential developer tools and offline code converters."
           />
-          <div className="sm:text-right sm:shrink-0">
+          <div className="text-left md:text-right md:shrink-0">
             <StatusBar tools={ALL_TOOLS} />
           </div>
         </div>
 
         {/* Controls */}
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+        <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:items-start lg:gap-4">
           <SearchBar
             value={search}
             onChange={setSearch}
             placeholder="Search tools..."
-            className="w-full sm:max-w-xs"
+            className="w-full lg:max-w-xs"
           />
           <CategoryFilter
             categories={CATEGORIES}

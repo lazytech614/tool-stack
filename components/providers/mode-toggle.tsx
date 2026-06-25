@@ -19,7 +19,7 @@ export function ModeToggle() {
       onClick={toggleTheme}
       className="
         relative
-        border-zinc-200
+        border-zinc-400
         bg-white
         hover:bg-zinc-100
         dark:border-zinc-800
@@ -35,6 +35,7 @@ export function ModeToggle() {
           transition-all
           dark:-rotate-90
           dark:scale-0
+          text-black
         "
       />
 

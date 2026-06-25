@@ -286,4 +286,5 @@ export const CATEGORIES: ToolCategory[] = [
   "Converter",
   "Preview",
   "Utilities",
+  "Github",
 ]

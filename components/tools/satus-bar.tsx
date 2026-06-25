@@ -9,7 +9,7 @@ export function StatusBar({ tools }: StatusBarProps) {
   const overflow = tools.length - names.length
 
   return (
-    <div className="text-right">
+    <div className="md:text-right">
       <p className="text-xs font-semibold uppercase tracking-widest text-zinc-900 dark:text-white">
         Utility status: {tools.length} active{" "}
         {tools.length === 1 ? "utility" : "utilities"}

@@ -2,6 +2,7 @@ import { Pin, PinOff } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Tool, ToolCategory } from "@/constants/tools";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const CATEGORY_COLORS: Record<
   ToolCategory,
@@ -68,7 +69,7 @@ export function ToolCard({ tool, isPinned, onTogglePin }: ToolCardProps) {
   const Icon = tool.icon
 
   return (
-    <div className="group relative flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-5 transition-all duration-200 hover:border-purple-300 dark:hover:border-purple-500/30 hover:shadow-lg dark:hover:shadow-purple-500/10">
+    <div className="group relative flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-5 transition-all duration-200 hover:border-purple-300 dark:hover:border-purple-500/30 hover:shadow-lg dark:hover:shadow-purple-500/10 group">
       {/* Pin button */}
       <button
         onClick={() => onTogglePin(tool.id)}
@@ -118,15 +119,20 @@ export function ToolCard({ tool, isPinned, onTogglePin }: ToolCardProps) {
         </div>
 
         {/* Text */}
-        <div className="flex flex-col gap-1">
-          <h3 className="text-sm font-semibold text-zinc-900 dark:text-white leading-tight">
+        <div className="flex flex-col gap-2">
+          <h3 className="text-lg sm:text-xl font-extrabold text-zinc-900 dark:text-white leading-tight uppercase">
             {tool.name}
           </h3>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-3">
             {tool.description}
           </p>
         </div>
       </Link>
+
+      <div className="flex items-center gap-2 mt-4 text-[10px] opacity-0 translate-y-1 transition-all duration-300 ease-out group-hover:opacity-80 group-hover:translate-y-0 cursor-pointer">
+        <span className="uppercase">use tool</span>
+        <MdKeyboardDoubleArrowRight className="h-4 w-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1.5" />
+      </div>
     </div>
   )
 }

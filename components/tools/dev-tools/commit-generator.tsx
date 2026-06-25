@@ -77,7 +77,7 @@ export function CommitGenerator() {
               className={cn(
                 "rounded-full px-3.5 py-1.5 text-xs font-medium border transition-all",
                 style === value
-                  ? "bg-purple-600 dark:bg-purple-500 text-white border-transparent"
+                  ? "bg-linear-to-r from-purple-600 to-violet-600 text-white border-transparent"
                   : "border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:border-purple-300 dark:hover:border-purple-500/40 hover:text-zinc-900 dark:hover:text-white"
               )}
             >
@@ -142,7 +142,7 @@ export function CommitGenerator() {
         disabled={isDisabled}
         className={cn(
           "w-full rounded-xl py-3 text-sm font-semibold transition-all",
-          "bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white",
+          "bg-linear-to-r from-purple-600 to-violet-600 cursor-pointer text-white",
           "disabled:opacity-40 disabled:cursor-not-allowed",
           "focus:outline-none focus:ring-2 focus:ring-purple-500/40"
         )}

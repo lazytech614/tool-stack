@@ -25,18 +25,23 @@ import {
 
 const links = [
   {
+    title: "Home",
+    href: "/",
+    icon: LayoutGrid,
+  },
+  {
     title: "Tools",
-    href: "#tools",
+    href: "/tools",
     icon: LayoutGrid,
   },
   {
     title: "Features",
-    href: "#features",
+    href: "/features",
     icon: Sparkles,
   },
   {
     title: "Pricing",
-    href: "#pricing",
+    href: "/pricing",
     icon: DollarSign,
   },
 ];

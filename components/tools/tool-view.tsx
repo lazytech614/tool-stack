@@ -2,7 +2,9 @@ import { Base64UrlTool } from "./dev-tools/base64-url"
 import { CommitGenerator } from "./dev-tools/commit-generator"
 import { DiffCheckerTool } from "./dev-tools/diff-checker"
 import { JsonFormatterTool } from "./dev-tools/json-formatter"
+import { JwtDebuggerTool } from "./dev-tools/jwt-debugger"
 import { PlaceholderTool } from "./dev-tools/placeholder-tool"
+import { RegexTesterTool } from "./dev-tools/regex-tester"
 
 interface ToolViewProps {
   toolId: string
@@ -18,6 +20,10 @@ export function ToolView({ toolId }: ToolViewProps) {
       return <JsonFormatterTool />
     case "commit-generator":
       return <CommitGenerator />
+    case "jwt-debugger":
+      return <JwtDebuggerTool />
+    case "regex-tester":
+      return <RegexTesterTool />
     // Add new tools here as you build them out
     default:
       return <PlaceholderTool toolId={toolId} />

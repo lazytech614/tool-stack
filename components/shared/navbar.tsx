@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { GitFork, Menu } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+
 
 import { Button } from "@/components/ui/button";
 import { Container } from "./container";
@@ -11,6 +12,10 @@ import { MobileSidebar } from "../landing/mobile-sidebar";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
+  {
+    label: "Home",
+    href: "/",
+  },
   {
     label: "Tools",
     href: "/tools",
@@ -29,12 +34,12 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/50 bg-white/80 backdrop-blur-xl dark:border-zinc-800/50 dark:bg-black/80">
+    <header className="sticky top-0 z-50 border-b border-zinc-200/50 bg-white backdrop-blur-xl dark:border-zinc-900/60 dark:bg-black/80">
       <Container>
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <h1 className="text-xl font-bold">
+            <h1 className="text-xl font-bold text-zinc-900 dark:text-white">
               Github
               <span className="bg-linear-to-r from-purple-600 to-violet-600 dark:from-purple-400 dark:to-violet-500 bg-clip-text text-transparent">
                 Helper
@@ -89,9 +94,9 @@ export function Navbar() {
 
             <Button
               variant="default"
-              className="hidden md:flex"
+              className="hidden md:flex cursor-pointer"
             >
-              <GitFork className="mr-2 h-4 w-4" />
+              <FaGithub className="mr-2 h-4 w-4" />
               Star on GitHub
             </Button>
 

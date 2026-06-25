@@ -1,4 +1,6 @@
-import { ArrowRight, GitFork } from "lucide-react";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+
 import { Button } from "@/components/ui/button";
 import { Container } from "../shared/container";
 import { ToolShowcase } from "./tool-showcase";
@@ -31,19 +33,20 @@ export function Hero() {
               <Link href="/tools">
                 <Button
                   size="lg"
-                  className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white"
+                  className="bg-linear-to-r from-purple-600 to-violet-600 text-white cursor-pointer group"
                 >
                   Explore Tools
-                  <ArrowRight className="ml-2 h-4 w-4" />
+
+                  <MdKeyboardDoubleArrowRight className="ml-2 h-6 w-6 transition-transform duration-300 ease-in-out group-hover:translate-x-1.5" />
                 </Button>
               </Link>
 
               <Button
                 size="lg"
-                variant="outline"
-                className="border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900"
+                variant="default"
+                className="cursor-pointer"
               >
-                <GitFork className="mr-2 h-4 w-4" />
+                <FaGithub className="mr-2 h-4 w-4" />
                 View on GitHub
               </Button>
             </div>

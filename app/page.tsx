@@ -3,9 +3,9 @@ import { Features } from "@/components/landing/features";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="bg-white dark:bg-black">
       <Hero />
-      <Features />
+      {/* <Features /> */}
     </main>
   );
 }
