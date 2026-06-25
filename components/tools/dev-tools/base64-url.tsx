@@ -55,7 +55,7 @@ export function Base64UrlTool() {
             className={cn(
               "rounded-full px-3.5 py-1.5 text-xs font-medium border transition-all",
               mode === value
-                ? "bg-purple-600 dark:bg-purple-500 text-white border-transparent"
+                ? "bg-linear-to-r from-purple-600 to-violet-600 text-white border-transparent"
                 : "border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:border-purple-300 dark:hover:border-purple-500/40 hover:text-zinc-900 dark:hover:text-white"
             )}
           >

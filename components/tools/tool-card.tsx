@@ -129,7 +129,7 @@ export function ToolCard({ tool, isPinned, onTogglePin }: ToolCardProps) {
         </div>
       </Link>
 
-      <div className="flex items-center gap-2 mt-4 text-[10px] opacity-0 translate-y-1 transition-all duration-300 ease-out group-hover:opacity-80 group-hover:translate-y-0 cursor-pointer">
+      <div className="flex items-center gap-2 mt-4 text-[10px] opacity-0 translate-y-1 transition-all duration-300 ease-out group-hover:opacity-80 group-hover:translate-y-0 cursor-pointer text-black dark:text-white">
         <span className="uppercase">use tool</span>
         <MdKeyboardDoubleArrowRight className="h-4 w-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1.5" />
       </div>

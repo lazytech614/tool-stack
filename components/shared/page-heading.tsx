@@ -59,7 +59,7 @@ export function PageHeading({
       )}
     >
       <Breadcrumb>
-        <BreadcrumbList>
+        <BreadcrumbList className="text-zinc-900 dark:text-white/80">
           <BreadcrumbItem>
             <BreadcrumbLink href="/">
               Home

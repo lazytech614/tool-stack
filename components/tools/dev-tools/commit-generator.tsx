@@ -66,7 +66,7 @@ export function CommitGenerator() {
     <div className="flex flex-col gap-8">
       {/* Style selector */}
       <div className="flex flex-col gap-2">
-        <label className="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500">
+        <label className="text-xs font-semibold uppercase tracking-widest text-zinc-900 dark:text-zinc-500">
           Commit Style
         </label>
         <div className="flex flex-wrap gap-2">
@@ -90,12 +90,12 @@ export function CommitGenerator() {
       {/* Diff input */}
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
-          <label className="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500">
+          <label className="text-xs font-semibold uppercase tracking-widest text-zinc-900 dark:text-zinc-500">
             Git Diff
           </label>
           <button
             onClick={() => setDiff(SAMPLE_DIFF)}
-            className="text-xs font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+            className="text-xs font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors cursor-pointer"
           >
             Try example
           </button>
