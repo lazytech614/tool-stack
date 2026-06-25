@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react"
 import { cn } from "@/lib/utils"
 import { EXAMPLE_MODIFIED, EXAMPLE_ORIGINAL } from "@/constants/examples";
-import { RotateCcw } from "lucide-react";
+import { RefreshCw } from "lucide-react";
 
 type DiffLine =
   | { type: "added"; text: string }
@@ -115,7 +115,7 @@ export function DiffCheckerTool() {
                 onClick={resetInput}
                 className="text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors flex items-center gap-1 cursor-pointer"
               >
-                <RotateCcw className="w-3 h-3" />
+                <RefreshCw className="w-3 h-3" />
                 Reset
               </button>
             

@@ -1,6 +1,7 @@
 import { Base64UrlTool } from "./dev-tools/base64-url"
 import { CommitGenerator } from "./dev-tools/commit-generator"
 import { DiffCheckerTool } from "./dev-tools/diff-checker"
+import { HashGenerator } from "./dev-tools/hash-generator"
 import { JsonFormatterValidator } from "./dev-tools/json-formatter-validator"
 import { JwtDebuggerTool } from "./dev-tools/jwt-debugger"
 import { MarkdownPreview } from "./dev-tools/markdown-preview"
@@ -27,6 +28,8 @@ export function ToolView({ toolId }: ToolViewProps) {
       return <RegexTesterTool />
     case "markdown-preview":
       return <MarkdownPreview />
+    case "hash-generator":
+      return <HashGenerator />
     // Add new tools here as you build them out
     default:
       return <PlaceholderTool toolId={toolId} />

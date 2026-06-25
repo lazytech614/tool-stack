@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Copy, Check, RotateCcw } from "lucide-react"
+import { Copy, Check, RefreshCw } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { toast } from "sonner"
 import { EXAMPLE_URL } from "@/constants/examples"
@@ -89,7 +89,7 @@ export function Base64UrlTool() {
                 onClick={resetInput}
                 className="text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors flex items-center gap-1 cursor-pointer"
               >
-                <RotateCcw className="w-3 h-3" />
+                <RefreshCw className="w-3 h-3" />
                 Reset
               </button>
             

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import {
   Copy, CheckCheck, Download, Eye, Code2, Columns2,
-  RotateCcw, WrapText, Hash,
+  RefreshCw, WrapText, Hash,
 } from "lucide-react";
 import { SAMPLE_MARKDOWN } from "@/constants/examples";
 import { useTheme } from "next-themes";
@@ -387,7 +387,7 @@ export function MarkdownPreview() {
 
             {/* Reset */}
             <button style={btnBase} onClick={() => setValue(SAMPLE_MARKDOWN)} title="Reset">
-              <RotateCcw size={12} />
+              <RefreshCw size={12} />
               Reset
             </button>
           </div>

@@ -284,3 +284,5 @@ const message = await generateCommit({
 
 Made with ❤️ by [GithubHelper](https://githubhelper.dev)
 `;
+
+export const SAMPLE_TEXT = "Hello World!"

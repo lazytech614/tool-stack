@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { AlertCircle, Check, Copy, Loader2, RotateCcw } from "lucide-react"
+import { AlertCircle, Check, Copy, Loader2, RefreshCw } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SAMPLE_DIFF } from "@/constants/examples"
 import { toast } from "sonner"
@@ -101,7 +101,7 @@ export function CommitGenerator() {
                 onClick={() => setDiff(SAMPLE_DIFF)}
                 className="text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors flex items-center gap-1 cursor-pointer"
               >
-                <RotateCcw className="w-3 h-3" />
+                <RefreshCw className="w-3 h-3" />
                 Reset
               </button>
             )}

@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { AlertCircle, Copy, Check, RotateCcw, ChevronDown } from "lucide-react"
+import { AlertCircle, Copy, Check, RefreshCw, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { toast } from "sonner"
 import { REGEX_TEMPLATES } from "@/constants/examples"
@@ -165,7 +165,7 @@ export function RegexTesterTool() {
               onClick={resetForm}
               className="text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors flex items-center gap-1 cursor-pointer"
             >
-              <RotateCcw className="w-3 h-3" />
+              <RefreshCw className="w-3 h-3" />
               Reset
             </button>
           )}
