@@ -33,21 +33,27 @@ const CATEGORY_COLORS: Record<
   },
   Converter: {
     badge:
-      "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-400",
+    "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-400",
     iconBg: "bg-cyan-100 dark:bg-cyan-500/10",
     iconColor: "text-cyan-600 dark:text-cyan-400",
   },
   Preview: {
     badge:
-      "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-400",
+    "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-400",
     iconBg: "bg-yellow-100 dark:bg-yellow-500/10",
     iconColor: "text-yellow-600 dark:text-yellow-400",
   },
   Utilities: {
     badge:
-      "bg-zinc-100 text-zinc-700 dark:bg-zinc-500/20 dark:text-zinc-400",
+    "bg-zinc-100 text-zinc-700 dark:bg-zinc-500/20 dark:text-zinc-400",
     iconBg: "bg-zinc-100 dark:bg-zinc-800",
     iconColor: "text-zinc-600 dark:text-zinc-400",
+  },
+  Github: {
+    badge:
+      "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-400",
+    iconBg: "bg-purple-100 dark:bg-purple-500/10",
+    iconColor: "text-purple-600 dark:text-purple-400",
   },
 }
 

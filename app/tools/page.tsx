@@ -70,8 +70,7 @@ const ToolsPage = () => {
         {/* Top row: heading + status */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <PageHeading
-            link="/"
-            title="Dev Utilities"
+            title="Developer Tools"
             description="Essential developer tools and offline code converters."
           />
           <div className="sm:text-right sm:shrink-0">
