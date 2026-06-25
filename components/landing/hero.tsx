@@ -1,3 +1,5 @@
+"use client";
+
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 
@@ -45,9 +47,10 @@ export function Hero() {
                 size="lg"
                 variant="default"
                 className="cursor-pointer"
+                onClick={() => window.open("https://github.com/lazytech614/tool-stack")}
               >
                 <FaGithub className="mr-2 h-4 w-4" />
-                View on GitHub
+                Star on GitHub
               </Button>
             </div>
 

@@ -12,13 +12,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Git Helper",
-  description: "Generate your commit in just one click",
-  keywords: ["git", "commit", "generator", "AI"],
-  authors: [{ name: "Git Helper" }],
+  title: "Tool Stack",
+  description: "Use different types of development tools completely free of any cost.",
+  keywords: ["git", "commit", "generator", "AI", "Development", "Tools", "Tool Stack"],
+  authors: [{ name: "Tool Stack" }],
   openGraph: {
-    title: "Git Helper",
-    description: "Generate your commit in just one click",
+    title: "Tool Stack",
+    description: "Use different types of development tools completely free of any cost.",
     type: "website",
   },
 };

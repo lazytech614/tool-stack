@@ -41,9 +41,9 @@ export function Navbar() {
             {/* Logo */}
             <Link href="/">
               <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-white">
-                Github
+                Tool
                 <span className="bg-linear-to-r from-purple-600 to-violet-600 dark:from-purple-400 dark:to-violet-500 bg-clip-text text-transparent">
-                  Helper
+                  Stack
                 </span>
               </h1>
             </Link>
@@ -87,6 +87,7 @@ export function Navbar() {
             <Button
               variant="default"
               className="hidden md:flex cursor-pointer py-2"
+              onClick={() => window.open("https://github.com/lazytech614/tool-stack")}
             >
               <FaGithub className="mr-2 h-4 w-4" />
               Star on GitHub

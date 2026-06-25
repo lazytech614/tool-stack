@@ -9,7 +9,7 @@ export function Footer() {
       <div className="relative">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-zinc-900 dark:text-zinc-500">
-            © {new Date().getFullYear()} GithubHelper. All rights reserved.
+            © {new Date().getFullYear()} ToolStack. All rights reserved.
           </p>
 
           <div className="flex items-center gap-5">
