@@ -1,4 +1,4 @@
-import { InferOptions } from "@/components/tools/dev-tools/json-to-schema"
+import { InferOptions } from "@/components/tools/dev-tools/generator/json-to-schema"
 import { SchemaDraft } from "@/types/dev-tools/json-to-schema"
 
 interface SchemaStats {

@@ -1,4 +1,4 @@
-import { ParseError } from "@/components/tools/dev-tools/json-formatter-validator";
+import { ParseError } from "@/components/tools/dev-tools/formatting/json-formatter-validator";
 
 // ─── JSON Syntax Highlighter ──────────────────────────────────────────────────
 

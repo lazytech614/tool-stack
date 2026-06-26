@@ -1,5 +1,5 @@
-import { TableState } from "@/components/tools/dev-tools/markdown-table";
-import { RegexTemplate } from "@/components/tools/dev-tools/regex-tester";
+import { TableState } from "@/components/tools/dev-tools/generator/markdown-table";
+import { RegexTemplate } from "@/components/tools/dev-tools/utilities/regex-tester";
 import { Dialect } from "@/types/dev-tools/sql-formatter";
 
 export const SAMPLE_DIFF = `

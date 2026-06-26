@@ -1,4 +1,4 @@
-import { TableState } from "@/components/tools/dev-tools/markdown-table"
+import { TableState } from "@/components/tools/dev-tools/generator/markdown-table"
 import { Alignment, ExportFormat } from "@/types/dev-tools/markdown-table"
 
 export function makeEmptyTable(cols: number, rows: number): TableState {

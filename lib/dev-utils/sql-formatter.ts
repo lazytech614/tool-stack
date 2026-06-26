@@ -1,4 +1,4 @@
-import { FormatOptions } from "@/components/tools/dev-tools/sql-formatter"
+import { FormatOptions } from "@/components/tools/dev-tools/formatting/sql-formatter"
 import { SQL_KEYWORDS } from "@/constants/examples"
 import { IdentifierCase, IndentStyle, KeywordCase } from "@/types/dev-tools/sql-formatter"
 
