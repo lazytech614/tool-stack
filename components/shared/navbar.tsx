@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "./container";
 import { ModeToggle } from "../providers/mode-toggle";
 
-import { MobileSidebar } from "../landing/mobile-sidebar";
+import { MobileSidebar } from "./mobile-sidebar";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
