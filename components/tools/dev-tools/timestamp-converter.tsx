@@ -36,6 +36,7 @@ import {
   exportToText,
 } from "@/lib/dev-utils/timestamp-converter-utils"
 import { TimestampUnit } from "@/types/dev-tools/timestamp-converter"
+import { toast } from "sonner"
 
 // ── Component ───────────────────────────────────────────────────────────────
 
@@ -88,6 +89,7 @@ export function UnixTimestampConverter() {
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text)
     setCopiedId(id)
+    toast.success("Copied successfully to clipboard")
     setTimeout(() => setCopiedId(null), 2000)
   }
 
@@ -225,8 +227,8 @@ export function UnixTimestampConverter() {
               className={cn(
                 "px-4 py-2 rounded-lg font-semibold text-sm transition-all",
                 copiedId === "current"
-                  ? "bg-emerald-600 text-white"
-                  : "bg-purple-600 hover:bg-purple-700 text-white"
+                  ? "text-green-500"
+                  : "text-white/80 hover:text-white"
               )}
             >
               {copiedId === "current" ? (
