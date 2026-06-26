@@ -1,0 +1,1 @@
+export type ConversionMode = "encode" | "decode"

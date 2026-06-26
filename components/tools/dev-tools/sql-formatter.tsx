@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo, useCallback, useEffect, useRef } from "react"
+import { useState, useMemo, useCallback, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import {
   Copy,
@@ -11,17 +11,14 @@ import {
 } from "lucide-react"
 import { DIALECTS, EXAMPLE_SQL, SQL_KEYWORDS } from "@/constants/examples"
 import { toast } from "sonner"
-
-// ---------------------------------------------------------------------------
-// Types
-// ---------------------------------------------------------------------------
-
-export type Dialect = "sql" | "postgresql" | "mysql" | "sqlite" | "tsql" | "oracle" | "mariadb"
-type IndentStyle = "2" | "4" | "tab"
-type KeywordCase = "upper" | "lower" | "preserve"
-type IdentifierCase = "upper" | "lower" | "preserve"
-type CommaStyle = "trailing" | "leading"
-type OutputMode = "format" | "minify"
+import { 
+  CommaStyle, 
+  Dialect, 
+  IdentifierCase, 
+  IndentStyle, 
+  KeywordCase, 
+  OutputMode 
+} from "@/types/dev-tools/sql-formatter"
 
 interface FormatOptions {
   dialect: Dialect

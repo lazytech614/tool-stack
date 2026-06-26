@@ -4,12 +4,7 @@ import { useState, useCallback } from "react"
 import { Copy, Check, RefreshCw, ClipboardList } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { toast } from "sonner"
-
-// ── types ──────────────────────────────────────────────────────────────────
-
-type UuidVersion = "v1" | "v4" | "v5"
-type BulkCount = 10 | 100 | 1000
-type FormatOption = "lowercase" | "uppercase" | "no-hyphens"
+import { BulkCount, FormatOption, UuidVersion } from "@/types/dev-tools/uuid-generator"
 
 // ── UUID generators ────────────────────────────────────────────────────────
 

@@ -5,11 +5,7 @@ import { Copy, Check, Upload, RefreshCw, ShieldCheck, ShieldX, AlertCircle } fro
 import { cn } from "@/lib/utils"
 import { toast } from "sonner"
 import { SAMPLE_TEXT } from "@/constants/examples"
-
-// ── types ──────────────────────────────────────────────────────────────────
-
-type Algorithm = "MD5" | "SHA-1" | "SHA-256" | "SHA-512"
-type TabMode = "text" | "file" | "compare"
+import { Algorithm, TabMode } from "@/types/dev-tools/hash-generator"
 
 const ALGORITHMS: Algorithm[] = ["MD5", "SHA-1", "SHA-256", "SHA-512"]
 

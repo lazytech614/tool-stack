@@ -5,8 +5,7 @@ import { Copy, Check, RefreshCw } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { toast } from "sonner"
 import { EXAMPLE_URL } from "@/constants/examples"
-
-type Mode = "base64-encode" | "base64-decode" | "url-encode" | "url-decode"
+import { Mode } from "@/types/dev-tools/base64-url"
 
 const MODES: { value: Mode; label: string }[] = [
   { value: "base64-encode", label: "Base64 Encode" },

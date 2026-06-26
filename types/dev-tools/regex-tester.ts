@@ -1,0 +1,1 @@
+export type Flag = "g" | "i" | "m" | "s"

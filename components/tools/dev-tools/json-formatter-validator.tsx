@@ -19,11 +19,9 @@ import {
 import { SAMPLE_JSON } from "@/constants/examples";
 import { toast } from "sonner";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ValidationState, ViewMode } from "@/types/dev-tools/json-formatter-validator";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-
-type ViewMode = "formatted" | "tree";
-type ValidationState = "idle" | "valid" | "error";
 
 interface ParseError {
   message: string;

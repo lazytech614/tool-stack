@@ -4,11 +4,7 @@ import { useState, useMemo } from "react"
 import { cn } from "@/lib/utils"
 import { EXAMPLE_MODIFIED, EXAMPLE_ORIGINAL } from "@/constants/examples";
 import { RefreshCw } from "lucide-react";
-
-type DiffLine =
-  | { type: "added"; text: string }
-  | { type: "removed"; text: string }
-  | { type: "unchanged"; text: string }
+import { DiffLine } from "@/types/dev-tools/diff-checker";
 
 function computeDiff(original: string, modified: string): DiffLine[] {
   const a = original.split("\n")

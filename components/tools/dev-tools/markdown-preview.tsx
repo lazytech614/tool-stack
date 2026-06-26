@@ -7,8 +7,7 @@ import {
 } from "lucide-react";
 import { SAMPLE_MARKDOWN } from "@/constants/examples";
 import { useTheme } from "next-themes";
-
-type ViewMode = "split" | "editor" | "preview";
+import { ViewMode } from "@/types/dev-tools/markdown-preview";
 
 // ─── Theme tokens ──────────────────────────────────────────────────────────────
 const T = {

@@ -5,10 +5,9 @@ import { Copy, Check, RotateCw, Info, RefreshCcw } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SAMPLE_BINARY, SAMPLE_TEXT } from "@/constants/examples"
 import { toast } from "sonner"
+import { ConversionMode } from "@/types/dev-tools/binary-converter"
 
 // ── types ──────────────────────────────────────────────────────────────────
-
-type ConversionMode = "encode" | "decode"
 
 interface ConversionResult {
   input: string

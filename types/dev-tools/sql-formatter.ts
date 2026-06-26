@@ -1,0 +1,6 @@
+export type Dialect = "sql" | "postgresql" | "mysql" | "sqlite" | "tsql" | "oracle" | "mariadb"
+export type IndentStyle = "2" | "4" | "tab"
+export type KeywordCase = "upper" | "lower" | "preserve"
+export type IdentifierCase = "upper" | "lower" | "preserve"
+export type CommaStyle = "trailing" | "leading"
+export type OutputMode = "format" | "minify"

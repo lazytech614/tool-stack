@@ -5,10 +5,9 @@ import { AlertCircle, Copy, Check, RefreshCw, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { toast } from "sonner"
 import { REGEX_TEMPLATES } from "@/constants/examples"
+import { Flag } from "@/types/dev-tools/regex-tester"
 
 // ── types ──────────────────────────────────────────────────────────────────
-
-type Flag = "g" | "i" | "m" | "s"
 
 interface Match {
   value: string

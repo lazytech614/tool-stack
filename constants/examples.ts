@@ -1,5 +1,5 @@
 import { RegexTemplate } from "@/components/tools/dev-tools/regex-tester";
-import { Dialect } from "@/components/tools/dev-tools/sql-formatter";
+import { Dialect } from "@/types/dev-tools/sql-formatter";
 
 export const SAMPLE_DIFF = `
 diff --git a/src/auth.ts b/src/auth.ts
@@ -29,7 +29,6 @@ export const EXAMPLE_MODIFIED = `function greet(name) {
 console.log(greet("John"));
 console.log("Welcome to GitHub Helper");
 `;
-
 
 export const SAMPLE_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjk5OTk5OTk5OTl9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 
