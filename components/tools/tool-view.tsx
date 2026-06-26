@@ -4,6 +4,7 @@ import { CommitGenerator } from "./dev-tools/commit-generator"
 import { DiffCheckerTool } from "./dev-tools/diff-checker"
 import { HashGenerator } from "./dev-tools/hash-generator"
 import { JsonFormatterValidator } from "./dev-tools/json-formatter-validator"
+import { JsonToSchema } from "./dev-tools/json-to-schema"
 import { JwtDebuggerTool } from "./dev-tools/jwt-debugger"
 import { LoremIpsum } from "./dev-tools/loremipsum"
 import { MarkdownPreview } from "./dev-tools/markdown-preview"
@@ -45,6 +46,8 @@ export function ToolView({ toolId }: ToolViewProps) {
       return <MarkdownTable />
     case "lorem-ipsum":
       return <LoremIpsum />
+    case "json-to-schema":
+      return <JsonToSchema />
     // Add new tools here as you build them out
     default:
       return <PlaceholderTool toolId={toolId} />

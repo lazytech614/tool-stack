@@ -210,7 +210,7 @@ export const ALL_TOOLS: Tool[] = [
       "Automatically infer a JSON Schema from any JSON document you paste in.",
     icon: FileJson,
     category: "Generator",
-    href: "/tools/json-schema",
+    href: "/tools/json-to-schema",
     isNew: true,
     seo: {
       title: "JSON to JSON Schema Generator Online | Tool Stack",

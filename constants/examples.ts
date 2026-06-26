@@ -326,3 +326,25 @@ export const SAMPLE_MARKDOWN_TABLE: TableState = {
     ["Dan", "Engineer"],
   ],
 }
+
+export const EXAMPLE_JSON = `{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john@example.com",
+  "website": "https://example.com",
+  "verified": true,
+  "createdAt": "2024-01-15T10:30:00Z",
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "zip": "10001",
+    "country": "US"
+  },
+  "roles": ["admin", "editor"],
+  "scores": [98, 87, 92],
+  "metadata": null,
+  "tags": [
+    { "id": 1, "label": "vip" },
+    { "id": 2, "label": "beta" }
+  ]
+}`

@@ -1,0 +1,1 @@
+export type SchemaDraft = "draft-07" | "draft-2019-09" | "draft-2020-12"
