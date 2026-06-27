@@ -10,28 +10,28 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-32 bg-white dark:bg-black">
+    <section className="relative overflow-hidden py-10 md:py-20 lg:py-28 bg-white dark:bg-black">
       <Container>
         <div className="flex flex-col lg:flex-row justify-between gap-x-4">
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 space-y-6">
             <div className="mb-6 inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-600 dark:text-purple-400 dark:border-purple-500/20 dark:bg-purple-500/10">
-              ✨ AI-Powered GitHub Tools
+              ⚡Built for Developers
             </div>
 
             <h1 className="text-5xl font-bold tracking-tight text-zinc-900 dark:text-white md:text-7xl">
-              Ship Better Code.
+              Build Faster.
               <span className="block bg-linear-to-r from-purple-600 via-purple-500 to-violet-600 dark:from-purple-400 dark:to-violet-600 bg-clip-text text-transparent">
-                Faster.
+                Develop Smarter.
               </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-              A collection of AI-powered tools to simplify your GitHub workflow. 
-              Write better commit messages, generate PR descriptions, release notes, 
-              and more.
+            <p className=" max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+              Save time with a curated collection of essential developer utilities.
+              Format code, convert data, generate content, validate inputs, and
+              streamline your workflow without leaving your browser.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className=" flex flex-wrap gap-4">
               <Link href="/tools">
                 <Button
                   size="lg"
@@ -54,24 +54,32 @@ export function Hero() {
               </Button>
             </div>
 
-            <div className="mt-12 flex items-center gap-6">
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="h-10 w-10 rounded-full bg-linear-to-br from-purple-500 to-violet-600 ring-2 ring-white dark:ring-black"
-                  />
-                ))}
-              </div>
+            <div className=" flex gap-8 mb-8 lg:mb-0">
               <div>
-                <p className="text-sm font-semibold text-zinc-900 dark:text-white">
-                  Loved by developers worldwide
+                <p className="text-2xl font-bold text-purple-600">
+                  25+
                 </p>
-                <div className="mt-1 flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400">★</span>
-                  ))}
-                </div>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Developer Tools
+                </p>
+              </div>
+
+              <div>
+                <p className="text-2xl font-bold text-purple-600">
+                  15+
+                </p>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Categories
+                </p>
+              </div>
+
+              <div>
+                <p className="text-2xl font-bold text-purple-600">
+                  100%
+                </p>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Free to Use
+                </p>
               </div>
             </div>
           </div>

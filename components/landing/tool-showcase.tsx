@@ -1,8 +1,8 @@
 import {
   FileCode,
-  GitPullRequest,
   BookOpen,
-  FileText,
+  Table2,
+  DatabaseZapIcon,
 } from "lucide-react";
 
 import { ToolCard } from "./tool-card";
@@ -31,21 +31,21 @@ export function ToolShowcase() {
           />
 
           <ToolCard
-            title="PR Description Generator"
-            description="Create clear and detailed pull request descriptions."
-            href="/tools/pr-generator"
+            title="Markdown Table Generator"
+            description="Build Markdown tables visually with a spreadsheet-like editor and copy the result."
+            href="/tools/markdown-table"
             badge="New"
             badgeColor="blue"
-            icon={<GitPullRequest size={20} />}
+            icon={<Table2 size={20} />}
           />
 
           <ToolCard
-            title="Release Notes Generator"
-            description="Generate changelogs and release notes in seconds."
-            href="/tools/release-notes-generator"
-            badge="Coming Soon"
-            badgeColor="purple"
-            icon={<FileText size={20} />}
+            title="SQL Formatter"
+            description="Format and beautify SQL queries with keyword highlighting and indentation control."
+            href="/tools/sql-formatter"
+            badge="New"
+            badgeColor="orange"
+            icon={<DatabaseZapIcon size={20} />}
           />
 
           <ToolCard
