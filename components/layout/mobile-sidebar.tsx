@@ -157,15 +157,6 @@ export function MobileSidebar() {
                         </div>
                       </div>
                     ))}
-
-                    {/* Browse all */}
-                    <Link
-                      href="/learn"
-                      className="flex items-center justify-between rounded-xl border border-dashed border-purple-200 dark:border-purple-500/20 px-3 py-2.5 text-sm font-medium text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/30 transition-colors"
-                    >
-                      Browse all resources
-                      <ArrowUpRight className="h-4 w-4" />
-                    </Link>
                   </div>
                 )}
               </div>

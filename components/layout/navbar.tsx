@@ -13,6 +13,7 @@ import { usePathname } from "next/navigation";
 import { navLinks } from "@/constants/configs/configs";
 import { MegaMenu } from "../shared/mega-menu/mega-menu";
 import { learningSections } from "@/constants/navigation/learning-menu";
+import { resourceSections } from "@/constants/navigation/resource-menu";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -61,9 +62,17 @@ export function Navbar() {
                 );
               })}
               
+              {/* Learning Mega Menu */}
               <MegaMenu
                 label="Learn"
                 sections={learningSections}
+                align="left"
+              />
+
+              {/* Resources Mega Menu */}
+              <MegaMenu
+                label="Resources"
+                sections={resourceSections}
                 align="left"
               />
             </nav>
