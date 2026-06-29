@@ -22,14 +22,16 @@
 - [Screenshots](#-screenshots)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
+- [Architechture](#-architecture)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Environment Variables](#environment-variables)
   - [Running Locally](#running-locally)
-- [Available Tools](#-available-tools)
-- [Roadmap](#-roadmap)
+- [Available Tools](#️-available-tools)
+- [Future Vision](#-vision)
+- [Roadmap](#️-roadmap)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Acknowledgements](#-acknowledgements)
@@ -132,28 +134,81 @@ Built with the latest versions of Next.js, TypeScript, and Tailwind CSS v4, the 
 
 ---
 
+## 🏗 Architecture
+
+ToolStack is organized into independent modules.
+
+app/
+components/
+constants/
+hooks/
+lib/
+
+Each feature lives in its own directory, making it easy to contribute without understanding the entire codebase.
+
+---
+
 ## 📁 Project Structure
 
 ```
+## 📁 Project Structure
+
+```text
 tool-stack/
-├── .github/                  # GitHub Actions workflows & templates
-├── app/                      # Next.js App Router pages & layouts
-│   ├── layout.tsx            # Root layout with theme provider
-│   ├── page.tsx              # Landing / home page
-│   └── [tool]/               # Individual tool pages (e.g. /commit-generator)
-├── components/               # Reusable React components
-│   ├── ui/                   # shadcn/ui base components
-│   └── ...                   # Feature-specific components
-├── constants/                # App-wide constants (tool list, categories, etc.)
-├── hooks/                    # Custom React hooks
-├── lib/                      # Utility functions and helpers
-├── public/                   # Static assets (images, icons, screenshots)
-├── types/                    # Shared TypeScript type definitions
-├── .env.example              # Environment variable template
-├── components.json           # shadcn/ui configuration
-├── next.config.ts            # Next.js configuration
-├── tailwind.config.ts        # Tailwind CSS configuration
-└── tsconfig.json             # TypeScript configuration
+├── .github/                     # GitHub workflows, issue templates & configs
+│
+├── app/                         # Next.js App Router
+│   ├── api/                     # API routes
+│   ├── tools/                   # Developer utility tools
+│   ├── learn/                   # Learning resources
+│   │   ├── cheatsheets/
+│   │   ├── docs/
+│   │   ├── glossary/
+│   │   └── snippets/
+│   ├── resources/               # Curated developer resources
+│   │   ├── ai-tools/
+│   │   ├── boilerplates/
+│   │   ├── browser-extensions/
+│   │   ├── cli-tools/
+│   │   ├── colors/
+│   │   ├── fonts/
+│   │   ├── icons/
+│   │   ├── illustrations/
+│   │   ├── mcp-servers/
+│   │   ├── prompts/
+│   │   ├── starter-kits/
+│   │   ├── templates/
+│   │   └── vscode-extensions/
+│   ├── sitemap.ts
+│   ├── robots.ts
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── tools/                   # Tool-specific components
+│   ├── learn/                   # Learn section components
+│   ├── resources/               # Resource cards & filters
+│   ├── shared/                  # Shared reusable components
+│   └── ui/                      # shadcn/ui components
+│
+├── constants/
+│   ├── configs/                 # Utility metadata and project configs
+│   ├── learnings/               # Cheatsheets, docs & snippets
+│   ├── resources/               # Resource datasets
+│   └── navigation.ts            # Navigation configuration
+│
+├── hooks/                       # Custom React hooks
+├── lib/                         # Utility functions & helpers
+├── providers/                   # Context providers
+├── public/                      # Images, icons & static assets
+├── styles/                      # Global styles
+├── types/                       # Shared TypeScript types
+│
+├── middleware.ts
+├── next.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+└── package.json
 ```
 
 ---
@@ -251,6 +306,24 @@ npm run lint     # Run ESLint
 
 ---
 
+## 🎯 Future Vision
+
+ToolStack aims to become the largest open-source collection of:
+
+- Developer tools
+- Learning resources
+- Cheatsheets
+- Boilerplates
+- Templates
+- Starter Kits
+- Browser Extensions
+- VS Code Extensions
+- CLI Tools
+
+All in one place.
+
+---
+
 ## 🗓️ Roadmap
 
 - [x] Commit Generator (AI-powered)
@@ -272,6 +345,61 @@ Have an idea for a new tool? [Open an issue](https://github.com/lazytech614/tool
 ---
 
 ## 🤝 Contributing
+
+### 🌟 Ways to Contribute
+
+There are many ways to contribute to ToolStack.
+
+#### 💻 Development
+
+- Add new developer tools
+- Improve UI/UX
+- Fix bugs
+- Improve accessibility
+- Optimize performance
+
+#### 📚 Learning Resources
+
+- Add cheatsheets
+- Add snippets
+- Improve documentation
+- Expand glossary
+
+#### 📦 Resource Collections
+
+Help us build the largest curated collection of:
+
+- Templates
+- Boilerplates
+- Starter Kits
+- Browser Extensions
+- VS Code Extensions
+- CLI Tools
+
+Most of these additions only require updating data files—perfect for first-time contributors.
+
+Look for issues labeled:
+
+- good first issue
+- help wanted
+
+---
+
+### 🚀 First Time Contributing?
+
+Never contributed to open source before?
+
+We've got you covered.
+
+1. Find an issue labeled `good first issue`
+2. Ask to be assigned
+3. Fork the repository
+4. Make your changes
+5. Open a Pull Request
+
+We'll happily help you throughout the process.
+
+---
 
 Contributions are what make the open source community such a great place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
