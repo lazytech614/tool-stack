@@ -10,7 +10,7 @@ import { SearchBar } from "@/components/shared/search-bar";
 import { SecondaryHeading } from "@/components/shared/secondary-heading";
 import { RESOURCES_TEMPLATES, Template } from "@/constants/resources/templates";
 import { useContentFilter } from "@/hooks/useContentFilters";
-import { templateToContentCard } from "@/lib/template-to-content";
+import { templateToContentCard } from "@/lib/content-mappers/template-to-content";
 
 export default function TemplatesPage() {
   const {
@@ -40,6 +40,7 @@ export default function TemplatesPage() {
     <ContentCard
       key={template.id}
       item={templateToContentCard(template)}
+      clickable={false}
       pin={{
         pinned: pinnedSet.has(template.id),
         onToggle: () => togglePin(template.id),

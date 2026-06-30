@@ -11,7 +11,7 @@ import { TagFilter } from "@/components/shared/tag-filter";
 
 import { cheatsheets, type Cheatsheet } from "@/constants/learnings/cheatsheets";
 
-import { cheatsheetToContentCard } from "@/lib/cheatsheet-to-content";
+import { cheatsheetToContentCard } from "@/lib/content-mappers/cheatsheet-to-content";
 import { useContentFilter } from "@/hooks/useContentFilters";
 
 export default function CheatsheetsPage() {

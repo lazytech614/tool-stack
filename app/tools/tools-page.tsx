@@ -13,7 +13,7 @@ import { ContentGrid } from "@/components/shared/content-grid";
 
 import { ALL_TOOLS, CATEGORIES } from "@/constants/configs/tools";
 
-import { toolToContentCard } from "@/lib/tool-to-content";
+import { toolToContentCard } from "@/lib/content-mappers/tool-to-content";
 import { useContentFilter } from "@/hooks/useContentFilters";
 
 export default function ToolsPage() {

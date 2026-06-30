@@ -10,7 +10,7 @@ import { ContentGrid } from "@/components/shared/content-grid";
 import { ContentCard } from "@/components/shared/content-card";
 
 import { StarterKit, starterKits } from "@/constants/resources/starter-kits";
-import { starterKitToContentCard } from "@/lib/starter-kit-to-content";
+import { starterKitToContentCard } from "@/lib/content-mappers/starter-kit-to-content";
 
 import { useContentFilter } from "@/hooks/useContentFilters";
 
@@ -43,6 +43,7 @@ export default function StarterKitsPage() {
     <ContentCard
       key={kit.id}
       item={starterKitToContentCard(kit)}
+      clickable={false}
       pin={{
         pinned: pinnedSet.has(kit.id),
         onToggle: () => togglePin(kit.id),

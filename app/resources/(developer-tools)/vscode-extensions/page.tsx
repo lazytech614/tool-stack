@@ -11,7 +11,7 @@ import { ContentCard } from "@/components/shared/content-card";
 
 import { vscodeExtensions, VSCodeExtension } from "@/constants/resources/vs-code-extensions";
 import { useContentFilter } from "@/hooks/useContentFilters";
-import { vscodeExtensionToContentCard } from "@/lib/vs-code-extension-to-content";
+import { vscodeExtensionToContentCard } from "@/lib/content-mappers/vs-code-extension-to-content";
 
 export default function VSCodeExtensionsPage() {
   const {
@@ -46,6 +46,7 @@ export default function VSCodeExtensionsPage() {
     <ContentCard
       key={extension.id}
       item={vscodeExtensionToContentCard(extension)}
+      clickable={false}
       pin={{
         pinned: pinnedSet.has(extension.id),
         onToggle: () => togglePin(extension.id),

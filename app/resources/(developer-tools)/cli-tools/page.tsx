@@ -10,7 +10,7 @@ import { ContentGrid } from "@/components/shared/content-grid";
 import { ContentCard } from "@/components/shared/content-card";
 
 import { cliTools, CLITool } from "@/constants/resources/cli-tools";
-import { cliToolToContentCard } from "@/lib/cli-tool-to-content";
+import { cliToolToContentCard } from "@/lib/content-mappers/cli-tool-to-content";
 import { useContentFilter } from "@/hooks/useContentFilters";
 
 export default function CLIToolsPage() {
@@ -52,6 +52,7 @@ export default function CLIToolsPage() {
     <ContentCard
       key={tool.id}
       item={cliToolToContentCard(tool)}
+      clickable={false}
       pin={{
         pinned: pinnedSet.has(tool.id),
         onToggle: () => togglePin(tool.id),

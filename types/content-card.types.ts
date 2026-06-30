@@ -48,6 +48,7 @@ export interface CardModel {
 
 export interface ContentCardProps {
   item: CardModel;
+  clickable?: boolean;
 
   pin?: {
     pinned: boolean;

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { type Section } from "@/constants/learnings/cheatsheets";
+import Link from "next/link";
 
 export function CheatsheetSidebar({ sections }: { sections: Section[] }) {
   const [activeId, setActiveId] = useState<string>("");
@@ -72,7 +73,7 @@ export function CheatsheetSidebar({ sections }: { sections: Section[] }) {
         const isActive = activeId === id;
 
         return (
-          <a
+          <Link
             key={id}
             href={`#${id}`}
             className={`flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-medium transition-all duration-150 ${
@@ -85,7 +86,7 @@ export function CheatsheetSidebar({ sections }: { sections: Section[] }) {
               <span className="h-1.5 w-1.5 rounded-full bg-purple-500 shrink-0" />
             )}
             {section.title}
-          </a>
+          </Link>
         );
       })}
     </nav>

@@ -10,7 +10,7 @@ import { ContentGrid } from "@/components/shared/content-grid";
 import { ContentCard } from "@/components/shared/content-card";
 
 import { browserExtensions, BrowserExtension } from "@/constants/resources/browser-extensions";
-import { browserExtensionToContentCard } from "@/lib/browser-extension-to-content";
+import { browserExtensionToContentCard } from "@/lib/content-mappers/browser-extension-to-content";
 import { useContentFilter } from "@/hooks/useContentFilters";
 
 export default function BrowserExtensionsPage() {
@@ -49,6 +49,7 @@ export default function BrowserExtensionsPage() {
     <ContentCard
       key={extension.id}
       item={browserExtensionToContentCard(extension)}
+      clickable={false}
       pin={{
         pinned: pinnedSet.has(extension.id),
         onToggle: () => togglePin(extension.id),

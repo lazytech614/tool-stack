@@ -10,7 +10,7 @@ import { ContentGrid } from "@/components/shared/content-grid";
 import { ContentCard } from "@/components/shared/content-card";
 
 import { boilerplates, Boilerplate } from "@/constants/resources/boilerplates";
-import { boilerplateToContentCard } from "@/lib/boilerplate-to-content";
+import { boilerplateToContentCard } from "@/lib/content-mappers/boilerplate-to-content";
 import { useContentFilter } from "@/hooks/useContentFilters";
 
 export default function BoilerplatesPage() {
@@ -48,6 +48,7 @@ export default function BoilerplatesPage() {
     <ContentCard
       key={boilerplate.id}
       item={boilerplateToContentCard(boilerplate)}
+      clickable={false}
       pin={{
         pinned: pinnedSet.has(boilerplate.id),
         onToggle: () => togglePin(boilerplate.id),

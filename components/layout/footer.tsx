@@ -1,4 +1,5 @@
 import { LEGAL } from "@/constants/configs/configs";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -11,13 +12,13 @@ export function Footer() {
 
           <div className="flex items-center gap-5">
             {LEGAL.map((l) => (
-              <a
+              <Link
                 key={l.name}
                 href={l.href}
                 className="text-xs text-zinc-900 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-400 transition-colors"
               >
                 {l.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { loadPinned, savePinned } from "@/lib/utils";
 
 interface UseContentFilterOptions<T> {
@@ -20,11 +20,13 @@ export function useContentFilter<T>({
 }: UseContentFilterOptions<T>) {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
+  const [pinnedIds, setPinnedIds] = useState<string[]>([]);
 
-  const [pinnedIds, setPinnedIds] = useState<string[]>(() => {
-    if (!enablePinning || !storageKey) return [];
-    return loadPinned(storageKey);
-  });
+  useEffect(() => {
+    if (!enablePinning || !storageKey) return;
+
+    setPinnedIds(loadPinned(storageKey));
+  }, [enablePinning, storageKey]);
 
   const togglePin = (id: string) => {
     if (!enablePinning || !storageKey) return;

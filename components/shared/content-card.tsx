@@ -10,6 +10,7 @@ import { CARD_COLORS } from "@/constants/configs/resource-card-colors";
 
 export function ContentCard({
   item,
+  clickable = true,
   pin,
 }: ContentCardProps) {
   const Icon = item.icon || MdKeyboardDoubleArrowRight;
@@ -39,7 +40,7 @@ export function ContentCard({
             "absolute right-4 top-4 rounded-full p-1.5 transition-all duration-200",
             pin.pinned
               ? "bg-purple-100 text-purple-600 dark:bg-purple-500/10 dark:text-purple-400"
-              : "text-zinc-400 opacity-0 group-hover:opacity-100 hover:bg-zinc-100 hover:text-zinc-700 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
+              : "text-zinc-400 sm:opacity-0 group-hover:opacity-100 hover:bg-zinc-100 hover:text-zinc-700 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
           )}
         >
           {pin.pinned ? (
@@ -52,7 +53,7 @@ export function ContentCard({
 
       <Link
         href={item.href}
-        className="flex flex-1 flex-col gap-4"
+        className={`flex flex-1 flex-col gap-4 ${!clickable && "cursor-default"}`}
       >
         {/* Header */}
 
@@ -124,23 +125,24 @@ export function ContentCard({
         )}
 
         <div className="flex-1" />
-
-        {/* Optional actions */}
-
-        {item.actions && (
-          <div className="mt-3">
-            {item.actions}
-          </div>
-        )}
       </Link>
+      
+      {/* Optional actions */}
+      {item.actions && (
+        <div className="mt-3">
+          {item.actions}
+        </div>
+      )}
 
       {/* Footer */}
 
-      <div className="mt-4 flex translate-y-1 items-center gap-2 text-[10px] uppercase text-zinc-900 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-80 dark:text-white">
-        <span>{item.footerLabel ?? "Open"}</span>
+      {clickable && (
+        <div className="mt-4 flex translate-y-1 items-center gap-2 text-[10px] uppercase text-zinc-900 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-80 dark:text-white">
+          <span>{item.footerLabel ?? "Open"}</span>
 
-        <MdKeyboardDoubleArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-      </div>
+          <MdKeyboardDoubleArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+        </div>
+      )}
     </div>
   );
 }

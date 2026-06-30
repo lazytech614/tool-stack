@@ -15,6 +15,7 @@ import { StatusBar } from "@/components/shared/satus-bar";
 import { SearchBar } from "@/components/shared/search-bar";
 import { CategoryFilter } from "@/components/shared/category-filter";
 import { useContentFilter } from "@/hooks/useContentFilters";
+import Link from "next/link";
 
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -45,13 +46,13 @@ function AlphabetBar({ available }: { available: string[] }) {
         const active = available.includes(letter);
 
         return active ? (
-          <a
+          <Link
             key={letter}
             href={`#letter-${letter}`}
             className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-semibold text-purple-600 transition-colors hover:bg-purple-50 dark:text-purple-400 dark:hover:bg-purple-950/40"
           >
             {letter}
-          </a>
+          </Link>
         ) : (
           <span
             key={letter}

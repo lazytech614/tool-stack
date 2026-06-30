@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { type HeadingBlock } from "@/constants/learnings/docs";
+import Link from "next/link";
 
 export function OnThisPage({ headings }: { headings: HeadingBlock[] }) {
   const [activeId, setActiveId] = useState("");
@@ -89,7 +90,7 @@ export function OnThisPage({ headings }: { headings: HeadingBlock[] }) {
         const isActive = activeId === id;
 
         return (
-          <a
+          <Link
             key={id}
             href={`#${id}`}
             onClick={() => setActiveId(id)}
@@ -105,7 +106,7 @@ export function OnThisPage({ headings }: { headings: HeadingBlock[] }) {
               <span className="h-1.5 w-1.5 rounded-full bg-purple-500 shrink-0" />
             )}
             {text}
-          </a>
+          </Link>
         );
       })}
     </nav>
