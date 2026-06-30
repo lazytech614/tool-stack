@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useCallback } from "react";
 
 import { Container } from "@/components/shared/container";
 import { PageHeading } from "@/components/shared/page-heading";
@@ -39,8 +39,8 @@ export default function ToolsPage() {
       tool.category.toLowerCase().includes(q),
   });
 
-  const renderTool = useMemo(
-    () => (tool: (typeof ALL_TOOLS)[number]) => (
+  const renderTool = useCallback(
+    (tool: (typeof ALL_TOOLS)[number]) => (
       <ContentCard
         key={tool.id}
         item={toolToContentCard(tool)}
