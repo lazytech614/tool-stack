@@ -37,7 +37,7 @@ export function DocsSidebar() {
             {/* Doc links */}
             <ul className="space-y-0.5">
               {categoryDocs.map((doc) => {
-                const href = `/docs/${doc.slug}`;
+                const href = `/learn/docs/${doc.slug}`;
                 const isActive = pathname === href;
 
                 return (
