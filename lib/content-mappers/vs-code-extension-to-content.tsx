@@ -3,9 +3,7 @@ import Link from "next/link";
 import { CardModel } from "@/types/content-card.types";
 import { VSCodeExtension } from "@/constants/resources/vs-code-extensions";
 
-export function vscodeExtensionToContentCard(
-  extension: VSCodeExtension
-): CardModel {
+export function vscodeExtensionToContentCard(extension: VSCodeExtension): CardModel {
   return {
     id: extension.id,
 
@@ -54,9 +52,7 @@ export function vscodeExtensionToContentCard(
 
         {/* Publisher */}
         <div className="text-xs text-zinc-500 dark:text-zinc-400">
-          <span className="font-semibold text-zinc-700 dark:text-zinc-300">
-            Publisher:
-          </span>{" "}
+          <span className="font-semibold text-zinc-700 dark:text-zinc-300">Publisher:</span>{" "}
           {extension.publisher}
         </div>
 
@@ -65,7 +61,7 @@ export function vscodeExtensionToContentCard(
           {extension.tags.slice(0, 4).map((tag) => (
             <span
               key={tag}
-              className="rounded-md bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:text-zinc-400"
+              className="rounded-md bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
             >
               #{tag}
             </span>

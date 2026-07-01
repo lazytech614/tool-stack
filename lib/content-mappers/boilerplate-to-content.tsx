@@ -1,11 +1,9 @@
 import Link from "next/link";
 
-import { Boilerplate } from "@/constants/resources/boilerplates";
 import { CardModel } from "@/types/content-card.types";
+import { Boilerplate } from "@/content/boilerplates";
 
-export function boilerplateToContentCard(
-  boilerplate: Boilerplate
-): CardModel {
+export function boilerplateToContentCard(boilerplate: Boilerplate): CardModel {
   return {
     id: boilerplate.id,
 
@@ -26,8 +24,8 @@ export function boilerplateToContentCard(
           boilerplate.difficulty === "Beginner"
             ? "green"
             : boilerplate.difficulty === "Intermediate"
-            ? "orange"
-            : "purple",
+              ? "orange"
+              : "purple",
       },
     ],
 
@@ -47,7 +45,7 @@ export function boilerplateToContentCard(
           {boilerplate.stack.slice(0, 3).map((tech) => (
             <span
               key={tech}
-              className="rounded-md bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:text-zinc-400"
+              className="rounded-md bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
             >
               {tech}
             </span>
@@ -59,7 +57,7 @@ export function boilerplateToContentCard(
           {boilerplate.includes.slice(0, 3).map((feature) => (
             <span
               key={feature}
-              className="rounded-md bg-green-100 dark:bg-green-900/30 px-2 py-0.5 text-[11px] font-medium text-green-700 dark:text-green-400"
+              className="rounded-md bg-green-100 px-2 py-0.5 text-[11px] font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400"
             >
               ✓ {feature}
             </span>
@@ -70,10 +68,7 @@ export function boilerplateToContentCard(
         <div className="flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400">
           <span>{boilerplate.license} License</span>
 
-          <span>
-            Updated{" "}
-            {new Date(boilerplate.lastUpdated).toLocaleDateString("en-US")}
-          </span>
+          <span>Updated {new Date(boilerplate.lastUpdated).toLocaleDateString("en-US")}</span>
         </div>
       </div>
     ),

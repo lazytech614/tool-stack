@@ -1,12 +1,10 @@
-import { Cheatsheet } from "@/constants/learnings/cheatsheets";
+import { Cheatsheet } from "@/content/cheatsheets";
 import { CardModel } from "@/types/content-card.types";
 
-export function cheatsheetToContentCard(
-  cheatsheet: Cheatsheet
-): CardModel {
+export function cheatsheetToContentCard(cheatsheet: Cheatsheet): CardModel {
   const snippets = cheatsheet.sections.reduce(
     (count, section) => count + section.snippets.length,
-    0
+    0,
   );
 
   return {
@@ -30,13 +28,9 @@ export function cheatsheetToContentCard(
     content: (
       <div className="space-y-3">
         <div className="flex items-center justify-between text-xs text-zinc-500">
-          <span>
-            📄 {cheatsheet.sections.length} Sections
-          </span>
+          <span>📄 {cheatsheet.sections.length} Sections</span>
 
-          <span>
-            ⚡ {snippets} Snippets
-          </span>
+          <span>⚡ {snippets} Snippets</span>
         </div>
 
         <div className="flex flex-wrap gap-1">

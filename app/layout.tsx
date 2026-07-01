@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tool-stack-kappa.vercel.app/"), 
+  metadataBase: new URL("https://tool-stack-kappa.vercel.app/"),
 
   title: {
     default: "Tool Stack",
@@ -123,23 +123,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${inter.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-white text-zinc-900 dark:bg-black dark:text-white">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col bg-white text-zinc-900 dark:bg-black dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
 
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
 
           <Footer />
 

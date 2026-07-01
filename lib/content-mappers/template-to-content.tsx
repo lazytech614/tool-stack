@@ -3,9 +3,7 @@ import Link from "next/link";
 import { Template } from "@/constants/resources/templates";
 import { CardModel } from "@/types/content-card.types";
 
-export function templateToContentCard(
-  template: Template
-): CardModel {
+export function templateToContentCard(template: Template): CardModel {
   return {
     id: template.id,
 
@@ -31,7 +29,7 @@ export function templateToContentCard(
     content: (
       <div className="space-y-3">
         {/* Stats */}
-        <div className="flex justify-between items-start gap-2 rounded-lg border border-zinc-200 bg-zinc-50 p-3 text-xs dark:border-zinc-800 dark:bg-zinc-900/60">
+        <div className="flex items-start justify-between gap-2 rounded-lg border border-zinc-200 bg-zinc-50 p-3 text-xs dark:border-zinc-800 dark:bg-zinc-900/60">
           <div>
             <p className="text-zinc-400">Stars</p>
             <p className="mt-0.5 font-semibold text-zinc-900 dark:text-white">
@@ -49,7 +47,7 @@ export function templateToContentCard(
 
         {/* Tech tags */}
         <div>
-          <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-zinc-400">
+          <p className="mb-1.5 text-[11px] font-semibold tracking-wide text-zinc-400 uppercase">
             Technologies
           </p>
 

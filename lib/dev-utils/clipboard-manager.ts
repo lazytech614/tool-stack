@@ -3,14 +3,7 @@
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export type DefaultCategory =
-  | "Git"
-  | "SQL"
-  | "Regex"
-  | "JSON"
-  | "API"
-  | "Commands"
-  | "Notes"
-  | "Other";
+  "Git" | "SQL" | "Regex" | "JSON" | "API" | "Commands" | "Notes" | "Other";
 
 export type Category = DefaultCategory | string;
 
@@ -94,7 +87,7 @@ export function updateSnippet(snippet: Snippet, updates: SnippetUpdate): Snippet
 export function searchSnippets(
   snippets: Snippet[],
   query: string,
-  activeCategory: Category | null
+  activeCategory: Category | null,
 ): Snippet[] {
   const q = query.trim().toLowerCase();
 
@@ -152,7 +145,7 @@ export function getTagsFromSnippets(snippets: Snippet[]): string[] {
 
 export function getCategoriesFromSnippets(
   snippets: Snippet[],
-  defaults: Category[] = DEFAULT_CATEGORIES
+  defaults: Category[] = DEFAULT_CATEGORIES,
 ): Category[] {
   const custom = snippets
     .map((s) => s.category)

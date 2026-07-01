@@ -3,9 +3,7 @@ import Link from "next/link";
 import type { CardModel } from "@/types/content-card.types";
 import type { CLITool } from "@/constants/resources/cli-tools";
 
-export function cliToolToContentCard(
-  tool: CLITool
-): CardModel {
+export function cliToolToContentCard(tool: CLITool): CardModel {
   const installCommand =
     tool.installCommands.brew ??
     tool.installCommands.npm ??
@@ -59,7 +57,7 @@ export function cliToolToContentCard(
           {tool.os.map((os) => (
             <span
               key={os}
-              className="rounded-md bg-blue-50 dark:bg-blue-950/30 px-2 py-0.5 text-[11px] font-medium text-blue-700 dark:text-blue-300"
+              className="rounded-md bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 dark:bg-blue-950/30 dark:text-blue-300"
             >
               {os}
             </span>
@@ -71,7 +69,7 @@ export function cliToolToContentCard(
           {tool.shells.map((shell) => (
             <span
               key={shell}
-              className="rounded-md bg-green-50 dark:bg-green-950/30 px-2 py-0.5 text-[11px] font-medium text-green-700 dark:text-green-300"
+              className="rounded-md bg-green-50 px-2 py-0.5 text-[11px] font-medium text-green-700 dark:bg-green-950/30 dark:text-green-300"
             >
               {shell}
             </span>
@@ -80,12 +78,12 @@ export function cliToolToContentCard(
 
         {/* Install command */}
         {installCommand && (
-          <div className="rounded-md bg-zinc-100 dark:bg-zinc-800 px-3 py-2">
-            <div className="mb-1 text-[10px] font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          <div className="rounded-md bg-zinc-100 px-3 py-2 dark:bg-zinc-800">
+            <div className="mb-1 text-[10px] font-semibold tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
               Install
             </div>
 
-            <code className="break-all text-[11px] font-mono text-zinc-700 dark:text-zinc-300">
+            <code className="font-mono text-[11px] break-all text-zinc-700 dark:text-zinc-300">
               {installCommand}
             </code>
           </div>
@@ -96,7 +94,7 @@ export function cliToolToContentCard(
           {tool.tags.slice(0, 4).map((tag) => (
             <span
               key={tag}
-              className="rounded-md bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:text-zinc-400"
+              className="rounded-md bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
             >
               #{tag}
             </span>

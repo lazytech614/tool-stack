@@ -3,9 +3,7 @@ import Link from "next/link";
 import { StarterKit } from "@/constants/resources/starter-kits";
 import { CardModel } from "@/types/content-card.types";
 
-export function starterKitToContentCard(
-  kit: StarterKit
-): CardModel {
+export function starterKitToContentCard(kit: StarterKit): CardModel {
   const enabledFeatures = [
     kit.features.authentication && "Auth",
     kit.features.database && "Database",
@@ -41,12 +39,7 @@ export function starterKitToContentCard(
       },
       {
         label: kit.pricing,
-        color:
-          kit.pricing === "Free"
-            ? "green"
-            : kit.pricing === "Paid"
-            ? "orange"
-            : "purple",
+        color: kit.pricing === "Free" ? "green" : kit.pricing === "Paid" ? "orange" : "purple",
       },
     ],
 
@@ -58,9 +51,7 @@ export function starterKitToContentCard(
         <div className="flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400">
           <span>⭐ {kit.stars.toLocaleString()}</span>
 
-          <span className="truncate">
-            By {kit.author}
-          </span>
+          <span className="truncate">By {kit.author}</span>
         </div>
 
         {/* Stack */}
@@ -68,7 +59,7 @@ export function starterKitToContentCard(
           {kit.stack.slice(0, 4).map((item) => (
             <span
               key={item}
-              className="rounded-md bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:text-zinc-400"
+              className="rounded-md bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
             >
               {item}
             </span>
@@ -80,7 +71,7 @@ export function starterKitToContentCard(
           {enabledFeatures.slice(0, 4).map((feature) => (
             <span
               key={feature}
-              className="rounded-md bg-green-50 dark:bg-green-950/40 px-2 py-0.5 text-[11px] font-medium text-green-700 dark:text-green-400"
+              className="rounded-md bg-green-50 px-2 py-0.5 text-[11px] font-medium text-green-700 dark:bg-green-950/40 dark:text-green-400"
             >
               ✓ {feature}
             </span>
@@ -90,9 +81,7 @@ export function starterKitToContentCard(
         {/* Tech details */}
         {tech.length > 0 && (
           <div className="text-[11px] leading-relaxed text-zinc-500 dark:text-zinc-400">
-            <span className="font-semibold text-zinc-700 dark:text-zinc-300">
-              Built with:
-            </span>{" "}
+            <span className="font-semibold text-zinc-700 dark:text-zinc-300">Built with:</span>{" "}
             {tech.slice(0, 3).join(" • ")}
           </div>
         )}

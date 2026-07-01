@@ -3,9 +3,7 @@ import Link from "next/link";
 import { BrowserExtension } from "@/constants/resources/browser-extensions";
 import { CardModel } from "@/types/content-card.types";
 
-export function browserExtensionToContentCard(
-  extension: BrowserExtension
-): CardModel {
+export function browserExtensionToContentCard(extension: BrowserExtension): CardModel {
   const primaryStore =
     extension.storeUrls.Chrome ??
     extension.storeUrls.Firefox ??
@@ -50,8 +48,7 @@ export function browserExtensionToContentCard(
         {/* Stats */}
         <div className="flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400">
           <span>
-            ⭐ {extension.rating} (
-            {extension.ratingCount.toLocaleString()})
+            ⭐ {extension.rating} ({extension.ratingCount.toLocaleString()})
           </span>
 
           <span>
@@ -64,9 +61,7 @@ export function browserExtensionToContentCard(
 
         {/* Publisher */}
         <div className="text-xs text-zinc-500 dark:text-zinc-400">
-          <span className="font-semibold text-zinc-700 dark:text-zinc-300">
-            Publisher:
-          </span>{" "}
+          <span className="font-semibold text-zinc-700 dark:text-zinc-300">Publisher:</span>{" "}
           {extension.publisher}
         </div>
 
@@ -75,7 +70,7 @@ export function browserExtensionToContentCard(
           {extension.browsers.map((browser) => (
             <span
               key={browser}
-              className="rounded-md bg-blue-50 dark:bg-blue-950/30 px-2 py-0.5 text-[11px] font-medium text-blue-700 dark:text-blue-300"
+              className="rounded-md bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 dark:bg-blue-950/30 dark:text-blue-300"
             >
               {browser}
             </span>
@@ -87,7 +82,7 @@ export function browserExtensionToContentCard(
           {extension.tags.slice(0, 4).map((tag) => (
             <span
               key={tag}
-              className="rounded-md bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:text-zinc-400"
+              className="rounded-md bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
             >
               #{tag}
             </span>

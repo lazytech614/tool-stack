@@ -8,11 +8,8 @@ interface Category<T extends string> {
 
 export function createMegaMenuSections<
   TItem extends { category: string },
-  TCategory extends string
->(
-  items: TItem[],
-  categories: readonly Category<TCategory>[]
-) {
+  TCategory extends string,
+>(items: TItem[], categories: readonly Category<TCategory>[]) {
   return categories.map((category) => ({
     id: category.key,
     title: category.title,

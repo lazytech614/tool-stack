@@ -23,7 +23,7 @@ export function highlight(json: string): string {
           cls = "text-zinc-400"; // null
         }
         return `<span class="${cls}">${match}</span>`;
-      }
+      },
     );
 }
 
